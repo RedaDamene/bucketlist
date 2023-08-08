@@ -48,9 +48,14 @@ main {
     color: black;
 }
 
+.avatar-user {
+    width: 250px;
+    border-radius: 10px;
+}
+
 .user {
     margin: 25px;
-    background-color: yellow;
+    background-color: #561844;
     width: 400px;
     padding: 25px;
     border-radius: 15px;
@@ -59,40 +64,13 @@ main {
 }
 
 @keyframes myAnim {
-    0%,
+    0% {
+        transform: translateX(0);
+    }
+
     100% {
-        transform: rotate(0deg);
-        transform-origin: 50% 50%;
+        transform: translateX(100px);
     }
-
-    10% {
-        transform: rotate(8deg);
-    }
-
-    20%,
-    40%,
-    60% {
-        transform: rotate(-10deg);
-    }
-
-    30%,
-    50%,
-    70% {
-        transform: rotate(10deg);
-    }
-
-    80% {
-        transform: rotate(-8deg);
-    }
-
-    90% {
-        transform: rotate(8deg);
-    }
-}
-
-.user > img {
-    width: 180px;
-    border-radius: 50%;
 }
 
 footer {
