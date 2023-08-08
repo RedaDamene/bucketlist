@@ -19,11 +19,13 @@
         {% block header %}
             <nav class="nav-bar">
                 <div class="logo">
-                    <img src="./{{ asset('Images/logo.png') }}" alt="Logo Bucket List">
+                    <img src="{{ asset('Images/logo.png') }}" alt="Logo Bucket List">
                     <p class="logo-title">Bucket-List</p>
                 </div>
                 <ul class="menu">
                     <li><a href="{{ path('main_home') }}">Home</a></li>
+                    <li><a href="{{ path('main_aboutus') }}">About Us</a></li>
+                    <li><a href="{{ path('wish_list') }}">List</a></li>
                 </ul>
             </nav>
         {% endblock %}
@@ -39,5 +41,6 @@
             <p>© Bucket-List - {{ 'now' | date('Y') }}</p>
         {% endblock %}
     </footer>
+
 </body>
 </html>

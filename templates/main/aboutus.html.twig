@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} | About Us
+{% endblock %}
+
+{% block body %}
+    <div class="main">
+        <h1 class="title">About Us</h1>
+        <p>lorem ipsum</p>
+
+        <div class="teams">
+            {% for team in teams %}
+                <ul class="user">
+
+                        <img src="{{ team.picture }}" class="avatar-user">
+                        <li><h2>{{ team.firstname }}</h2></li>
+                        <li><h2>{{ team.lastname }}</h2></li>
+                        <li>{{ team.dateOfBirth | date('d/m/Y') }}</li>
+                        <li><p>{{ team.description }}</p></li>
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        let img = document.querySelectorAll("img");
+        img.addEventListener("error", function(event) {
+            event.target.src = "https://img.freepik.com/photos-gratuite/drapeau-algerie_1401-52.jpg";
+            event.onerror = null;
+        })
+    </script>
+
+{% endblock %}
+

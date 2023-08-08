@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    list-style: none;
 }
 header {
     background-color: #38ada9;
@@ -34,8 +35,64 @@ main {
 .main {
     color: aliceblue;
     height: 100%;
-    margin: 0 auto;
     width: 1400px;
+    margin: 0 auto 80px;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.teams {
+    display: flex;
+    color: black;
+}
+
+.user {
+    margin: 25px;
+    background-color: yellow;
+    width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    10% {
+        transform: rotate(8deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-8deg);
+    }
+
+    90% {
+        transform: rotate(8deg);
+    }
+}
+
+.user > img {
+    width: 180px;
+    border-radius: 50%;
 }
 
 footer {
