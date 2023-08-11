@@ -19,7 +19,6 @@ class MainController extends AbstractController
     #[Route('/aboutus', name: 'main_aboutus')]
     public function aboutus(): Response
     {
-
         $path = __DIR__ . '..\..\data\team.json';
         $jsonTeam = file_get_contents($path);
         $teams = json_decode($jsonTeam);

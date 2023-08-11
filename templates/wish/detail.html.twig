@@ -5,8 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    <div class="main">
-        <h1>Détails de l'id : {{ 'id' }}</h1>
+    <div class="wish_main">
+        <h1 style="text-align: center; font-size: 20px">Détail du souhait : {{ wish.title }}</h1>
+        <p style="text-align: center; font-size: 20px">Description : {{ wish.description }}</p>
+        <p style="text-align: center; font-size: 20px">Auteur : {{ wish.author }}</p>
+        <p style="text-align: center; font-size: 20px">Auteur : {{ wish.dateCreated | date('d-m-Y') }}</p>
     </div>
 {% endblock %}
 
